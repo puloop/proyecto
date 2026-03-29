@@ -42,7 +42,7 @@
             this.Volverbtn = new System.Windows.Forms.Button();
             this.txtconfirmarClaveRegistro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtUsuarioR = new System.Windows.Forms.TextBox();
             this.txtClaveRegistro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,10 +52,10 @@
             this.pnlClaveLine = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelRegistro.SuspendLayout();
             this.Panelogin.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -151,7 +151,7 @@
             this.panelRegistro.Controls.Add(this.Volverbtn);
             this.panelRegistro.Controls.Add(this.txtconfirmarClaveRegistro);
             this.panelRegistro.Controls.Add(this.label6);
-            this.panelRegistro.Controls.Add(this.button2);
+            this.panelRegistro.Controls.Add(this.btnRegistrar);
             this.panelRegistro.Controls.Add(this.txtUsuarioR);
             this.panelRegistro.Controls.Add(this.txtClaveRegistro);
             this.panelRegistro.Controls.Add(this.label4);
@@ -237,19 +237,20 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Confirmar Clave";
             // 
-            // button2
+            // btnRegistrar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(241, 329);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(132, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Registrarme";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(241, 329);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnRegistrar.Size = new System.Drawing.Size(132, 35);
+            this.btnRegistrar.TabIndex = 3;
+            this.btnRegistrar.Text = "Registrarme";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtUsuarioR
             // 
@@ -314,7 +315,7 @@
             this.Panelogin.Controls.Add(this.label3);
             this.Panelogin.Controls.Add(this.label1);
             this.Panelogin.Controls.Add(this.label2);
-            this.Panelogin.Location = new System.Drawing.Point(0, 0);
+            this.Panelogin.Location = new System.Drawing.Point(435, 3);
             this.Panelogin.Name = "Panelogin";
             this.Panelogin.Size = new System.Drawing.Size(400, 450);
             this.Panelogin.TabIndex = 7;
@@ -354,10 +355,18 @@
             this.pnlSidebar.Controls.Add(this.label10);
             this.pnlSidebar.Controls.Add(this.label9);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSidebar.Location = new System.Drawing.Point(393, 0);
+            this.pnlSidebar.Location = new System.Drawing.Point(1029, 0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(205, 450);
             this.pnlSidebar.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Location = new System.Drawing.Point(1, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(2, 450);
+            this.panel1.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -392,20 +401,12 @@
             this.label9.Text = "SISTEMA DE\r\n  LOGIN\r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Location = new System.Drawing.Point(1, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 450);
-            this.panel1.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(598, 450);
+            this.ClientSize = new System.Drawing.Size(1234, 450);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.Panelogin);
             this.Controls.Add(this.panelRegistro);
@@ -439,7 +440,7 @@
         private System.Windows.Forms.Panel Panelogin;
         private System.Windows.Forms.TextBox txtconfirmarClaveRegistro;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button Volverbtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
