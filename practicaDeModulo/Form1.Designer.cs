@@ -35,11 +35,15 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.Aceptarbtn = new System.Windows.Forms.Button();
             this.panelRegistro = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pnlAdminRline = new System.Windows.Forms.Panel();
             this.pnlconfirmarClaveRegistroLine = new System.Windows.Forms.Panel();
             this.pnlUsuarioRLine = new System.Windows.Forms.Panel();
             this.pnlClaveRegistroLine = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.Volverbtn = new System.Windows.Forms.Button();
+            this.txtAdminR = new System.Windows.Forms.TextBox();
             this.txtconfirmarClaveRegistro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -53,9 +57,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelRegistro.SuspendLayout();
             this.Panelogin.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -144,11 +148,15 @@
             // panelRegistro
             // 
             this.panelRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelRegistro.Controls.Add(this.label11);
+            this.panelRegistro.Controls.Add(this.checkBox1);
+            this.panelRegistro.Controls.Add(this.pnlAdminRline);
             this.panelRegistro.Controls.Add(this.pnlconfirmarClaveRegistroLine);
             this.panelRegistro.Controls.Add(this.pnlUsuarioRLine);
             this.panelRegistro.Controls.Add(this.pnlClaveRegistroLine);
             this.panelRegistro.Controls.Add(this.label7);
             this.panelRegistro.Controls.Add(this.Volverbtn);
+            this.panelRegistro.Controls.Add(this.txtAdminR);
             this.panelRegistro.Controls.Add(this.txtconfirmarClaveRegistro);
             this.panelRegistro.Controls.Add(this.label6);
             this.panelRegistro.Controls.Add(this.btnRegistrar);
@@ -160,6 +168,38 @@
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(400, 450);
             this.panelRegistro.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.Location = new System.Drawing.Point(167, 311);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(176, 23);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Ingresa codigo admin";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.checkBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.checkBox1.Location = new System.Drawing.Point(26, 275);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(137, 27);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Como Admin";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // pnlAdminRline
+            // 
+            this.pnlAdminRline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.pnlAdminRline.Location = new System.Drawing.Point(183, 298);
+            this.pnlAdminRline.Name = "pnlAdminRline";
+            this.pnlAdminRline.Size = new System.Drawing.Size(153, 2);
+            this.pnlAdminRline.TabIndex = 16;
             // 
             // pnlconfirmarClaveRegistroLine
             // 
@@ -202,7 +242,7 @@
             this.Volverbtn.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.Volverbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Volverbtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Volverbtn.Location = new System.Drawing.Point(31, 329);
+            this.Volverbtn.Location = new System.Drawing.Point(31, 365);
             this.Volverbtn.Name = "Volverbtn";
             this.Volverbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Volverbtn.Size = new System.Drawing.Size(132, 35);
@@ -210,6 +250,22 @@
             this.Volverbtn.Text = "Volver";
             this.Volverbtn.UseVisualStyleBackColor = false;
             this.Volverbtn.Click += new System.EventHandler(this.Volverbtn_Click);
+            // 
+            // txtAdminR
+            // 
+            this.txtAdminR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtAdminR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdminR.Enabled = false;
+            this.txtAdminR.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAdminR.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.txtAdminR.Location = new System.Drawing.Point(191, 275);
+            this.txtAdminR.MaxLength = 25;
+            this.txtAdminR.Name = "txtAdminR";
+            this.txtAdminR.Size = new System.Drawing.Size(152, 24);
+            this.txtAdminR.TabIndex = 2;
+            this.txtAdminR.UseSystemPasswordChar = true;
+            this.txtAdminR.Enter += new System.EventHandler(this.ResaltarLinea);
+            this.txtAdminR.Leave += new System.EventHandler(this.NormalizarLinea);
             // 
             // txtconfirmarClaveRegistro
             // 
@@ -243,7 +299,7 @@
             this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(241, 329);
+            this.btnRegistrar.Location = new System.Drawing.Point(238, 365);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnRegistrar.Size = new System.Drawing.Size(132, 35);
@@ -315,7 +371,7 @@
             this.Panelogin.Controls.Add(this.label3);
             this.Panelogin.Controls.Add(this.label1);
             this.Panelogin.Controls.Add(this.label2);
-            this.Panelogin.Location = new System.Drawing.Point(435, 3);
+            this.Panelogin.Location = new System.Drawing.Point(0, 0);
             this.Panelogin.Name = "Panelogin";
             this.Panelogin.Size = new System.Drawing.Size(400, 450);
             this.Panelogin.TabIndex = 7;
@@ -355,7 +411,7 @@
             this.pnlSidebar.Controls.Add(this.label10);
             this.pnlSidebar.Controls.Add(this.label9);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSidebar.Location = new System.Drawing.Point(1029, 0);
+            this.pnlSidebar.Location = new System.Drawing.Point(398, 0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(205, 450);
             this.pnlSidebar.TabIndex = 9;
@@ -368,23 +424,14 @@
             this.panel1.Size = new System.Drawing.Size(2, 450);
             this.panel1.TabIndex = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::practicaDeModulo.Properties.Resources.eicon;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 81);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.label10.Location = new System.Drawing.Point(32, 179);
+            this.label10.Location = new System.Drawing.Point(32, 170);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 392);
+            this.label10.Size = new System.Drawing.Size(148, 280);
             this.label10.TabIndex = 17;
             this.label10.Text = "Este es nuestra app educativa con un estilo moderno el cual busca captar la atenc" +
     "ion de cada uno de las persona que busquen aprender o poner a prueba sus conocim" +
@@ -401,12 +448,21 @@
             this.label9.Text = "SISTEMA DE\r\n  LOGIN\r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::practicaDeModulo.Properties.Resources.eicon;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 81);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(1234, 450);
+            this.ClientSize = new System.Drawing.Size(603, 450);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.Panelogin);
             this.Controls.Add(this.panelRegistro);
@@ -454,6 +510,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel pnlAdminRline;
+        private System.Windows.Forms.TextBox txtAdminR;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -31,36 +31,14 @@ namespace practicaDeModulo
 
 
         }
-
-        private void ResaltarLinea(object sender, EventArgs e)
+        void limpiar()
         {
-            TextBox txt = (TextBox)sender;
-            string nombreLinea = "pnl" + txt.Name.Substring(3) + "Line";
-            Control linea = this.Controls.Find(nombreLinea, true).FirstOrDefault();
-
-            if (linea != null)
-            {
-
-                if (txt.Parent.Name == "pnlRegistro")
-                    linea.BackColor = ColorTranslator.FromHtml("#10B981");
-                else
-                    linea.BackColor = ColorTranslator.FromHtml("#007ACC");
-
-                linea.Height = 2;
-            }
+            txtClaveRegistro.Clear();
+            txtconfirmarClaveRegistro.Clear();
+            txtUsuarioR.Clear();
         }
-        private void NormalizarLinea(object sender, EventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            string nombreLinea = "pnl" + txt.Name.Substring(3) + "Line";
-            Control linea = this.Controls.Find(nombreLinea, true).FirstOrDefault();
 
-            if (linea != null)
-            {
-                linea.BackColor = Color.Gray;
-                linea.Height = 1;
-            }
-        }
+
         private void label1_Click(object sender, EventArgs e)
         {
             Panelogin.Visible = false;
@@ -93,8 +71,25 @@ namespace practicaDeModulo
             Usuario UsusarioEncontrado = ListaU.Find(x => x.NombreUser == NombreUsuarioI && x.Clave == ClaveUsuario);
             if (UsusarioEncontrado != null)
             {
-                MessageBox.Show($"Bienvenido {UsusarioEncontrado.NombreUser}, tu perfil es {UsusarioEncontrado.Perfil}.", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (UsusarioEncontrado.Perfil is Administrador)
+                {
+                    // 1. Creamos la ventana
+                    FormAdmin panelAdmin = new FormAdmin();
 
+                    // 2. Ocultamos el Login (Form1)
+                    this.Hide();
+
+                    // 3. Mostramos el Panel de Admin
+                    panelAdmin.Show();
+                }
+                else
+                {
+                    FormJugador panelJugador = new FormJugador();
+                    this.Hide();
+                    panelJugador.Show();
+                }
+                MessageBox.Show($"Bienvenido {UsusarioEncontrado.NombreUser}, tu perfil es {UsusarioEncontrado.Perfil}.", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar();
             }
             else
             {
@@ -112,6 +107,7 @@ namespace practicaDeModulo
             else
             {
                 id++;
+                string Codigo = "!2w1";
                 string nombreUserR = txtUsuarioR.Text;
                 string claveUsuarioR = txtClaveRegistro.Text;
                 string claveUsuarioRR = txtconfirmarClaveRegistro.Text;
@@ -123,20 +119,84 @@ namespace practicaDeModulo
                 {
                     MessageBox.Show("El nombre de usuario ya existe. Por favor, elija otro.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else 
-                { 
+                else
+                {
                     if (txtClaveRegistro.Text != txtconfirmarClaveRegistro.Text)
                     {
                         MessageBox.Show("Las contraseñas no coinciden.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    else
 
-                        ListaU.Add(new Usuario(nombreUserR, id, claveUsuarioR, RolJugador));
-                    MessageBox.Show("Registro Exitoso");
+                    Rol rolAsignado = new Jugador();
 
+                    if (checkBox1.Checked)
+                    {
+                        if (txtAdminR.Text == Codigo)
+                        {
+                            rolAsignado = new Administrador();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El código de administrador es incorrecto.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            checkBox1.Checked = false;
+
+                            return;
+                        }
+                    }
+                    id++;
+                    ListaU.Add(new Usuario(nombreUserR, id, claveUsuarioR, rolAsignado));
+
+                    MessageBox.Show("Registro Exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    limpiar();
+                    checkBox1.Checked = false;
                 }
+
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtAdminR.Enabled = checkBox1.Checked;
+            if (!checkBox1.Checked)
+            {
+                txtAdminR.Clear();
+            }
+            else
+            {
+                txtAdminR.Focus();
+            }
+        }
+        private void ResaltarLinea(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            string nombreLinea = "pnl" + txt.Name.Substring(3) + "Line";
+            Control linea = this.Controls.Find(nombreLinea, true).FirstOrDefault();
+
+            if (linea != null)
+            {
+
+                if (txt.Parent.Name == "pnlRegistro")
+                    linea.BackColor = ColorTranslator.FromHtml("#10B981");
+                else
+                    linea.BackColor = ColorTranslator.FromHtml("#007ACC");
+
+                linea.Height = 2;
+            }
+        }
+        private void NormalizarLinea(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            string nombreLinea = "pnl" + txt.Name.Substring(3) + "Line";
+            Control linea = this.Controls.Find(nombreLinea, true).FirstOrDefault();
+
+            if (linea != null)
+            {
+                linea.BackColor = Color.Gray;
+                linea.Height = 1;
             }
         }
     }
+
 }
