@@ -56,10 +56,11 @@
             this.pnlClaveLine = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelRegistro.SuspendLayout();
             this.Panelogin.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -406,6 +407,7 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.pnlSidebar.Controls.Add(this.button1);
             this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.pictureBox1);
             this.pnlSidebar.Controls.Add(this.label10);
@@ -416,6 +418,20 @@
             this.pnlSidebar.Size = new System.Drawing.Size(205, 450);
             this.pnlSidebar.TabIndex = 9;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(172, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 45);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.salirPbtn_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
@@ -423,30 +439,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 450);
             this.panel1.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.label10.Location = new System.Drawing.Point(32, 170);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 280);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Este es nuestra app educativa con un estilo moderno el cual busca captar la atenc" +
-    "ion de cada uno de las persona que busquen aprender o poner a prueba sus conocim" +
-    "ientos\r\n";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label9.Location = new System.Drawing.Point(12, 100);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 80);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "SISTEMA DE\r\n  LOGIN\r\n";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -456,6 +448,30 @@
             this.pictureBox1.Size = new System.Drawing.Size(90, 81);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
+            this.label10.Location = new System.Drawing.Point(32, 170);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 271);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Este es nuestra app educativa con un estilo moderno el cual busca captar la atenc" +
+    "ion de cada uno de las persona que busquen aprender o poner a prueba sus conocim" +
+    "ientos\r\n";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.label9.Location = new System.Drawing.Point(12, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 80);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "LOGIN";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -514,6 +530,7 @@
         private System.Windows.Forms.Panel pnlAdminRline;
         private System.Windows.Forms.TextBox txtAdminR;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace practicaDeModulo
 {
-    public partial class formArquitectura : Form
+    public partial class Form2 : Form
     {
-        public formArquitectura()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void volverbtnAR_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

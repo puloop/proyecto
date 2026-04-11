@@ -1,6 +1,6 @@
 ﻿namespace practicaDeModulo
 {
-    partial class FormJugador
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PanelMenu = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Salirbtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Deporte = new System.Windows.Forms.Button();
-            this.Calculo = new System.Windows.Forms.Button();
-            this.Antropologia = new System.Windows.Forms.Button();
-            this.Arquitectura = new System.Windows.Forms.Button();
             this.PanelDejuego = new System.Windows.Forms.Panel();
             this.LabelPregunta = new System.Windows.Forms.Label();
             this.ArquitecturaPictureBox = new System.Windows.Forms.PictureBox();
@@ -60,190 +46,12 @@
             this.contador = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labeldeModulo = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.pnlSidebar.SuspendLayout();
-            this.PanelMenu.SuspendLayout();
             this.PanelDejuego.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ArquitecturaPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pnlSidebar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(742, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 736);
-            this.panel1.TabIndex = 0;
-            // 
-            // pnlSidebar
-            // 
-            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.pnlSidebar.Controls.Add(this.label6);
-            this.pnlSidebar.Controls.Add(this.label5);
-            this.pnlSidebar.Controls.Add(this.label4);
-            this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSidebar.Location = new System.Drawing.Point(3, 0);
-            this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(395, 736);
-            this.pnlSidebar.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(16, 239);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(366, 67);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Sistema de juego";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label5.Location = new System.Drawing.Point(156, 153);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 21);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Grupo1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 55F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(59, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(264, 146);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "edu";
-            // 
-            // PanelMenu
-            // 
-            this.PanelMenu.Controls.Add(this.label3);
-            this.PanelMenu.Controls.Add(this.label2);
-            this.PanelMenu.Controls.Add(this.Salirbtn);
-            this.PanelMenu.Controls.Add(this.label1);
-            this.PanelMenu.Controls.Add(this.Deporte);
-            this.PanelMenu.Controls.Add(this.Calculo);
-            this.PanelMenu.Controls.Add(this.Antropologia);
-            this.PanelMenu.Controls.Add(this.Arquitectura);
-            this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(746, 731);
-            this.PanelMenu.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label3.Location = new System.Drawing.Point(88, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(543, 21);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Elige un módulo para comenzar a poner a prueba tus conocimientos.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 26F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(71, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(573, 70);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Selecciona tu Desafío";
-            // 
-            // Salirbtn
-            // 
-            this.Salirbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Salirbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Salirbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Salirbtn.Font = new System.Drawing.Font("Fira Code", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salirbtn.Location = new System.Drawing.Point(624, 659);
-            this.Salirbtn.Name = "Salirbtn";
-            this.Salirbtn.Size = new System.Drawing.Size(85, 38);
-            this.Salirbtn.TabIndex = 14;
-            this.Salirbtn.Text = "Salir";
-            this.Salirbtn.UseVisualStyleBackColor = false;
-            this.Salirbtn.Click += new System.EventHandler(this.Salirbtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label1.Location = new System.Drawing.Point(22, 668);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 21);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "¿Change to English? Switch here.\r\n";
-            // 
-            // Deporte
-            // 
-            this.Deporte.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Deporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Deporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Deporte.Font = new System.Drawing.Font("Fira Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deporte.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Deporte.Location = new System.Drawing.Point(402, 421);
-            this.Deporte.Name = "Deporte";
-            this.Deporte.Size = new System.Drawing.Size(223, 169);
-            this.Deporte.TabIndex = 12;
-            this.Deporte.Text = "⚽\r\nDeporte\r\n";
-            this.Deporte.UseVisualStyleBackColor = false;
-            this.Deporte.Click += new System.EventHandler(this.Deporte_Click);
-            // 
-            // Calculo
-            // 
-            this.Calculo.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Calculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Calculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Calculo.Font = new System.Drawing.Font("Fira Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calculo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.Calculo.Location = new System.Drawing.Point(145, 421);
-            this.Calculo.Name = "Calculo";
-            this.Calculo.Size = new System.Drawing.Size(223, 169);
-            this.Calculo.TabIndex = 11;
-            this.Calculo.Text = "📐\r\nCálculo\r\n";
-            this.Calculo.UseVisualStyleBackColor = false;
-            this.Calculo.Click += new System.EventHandler(this.Calculo_Click);
-            // 
-            // Antropologia
-            // 
-            this.Antropologia.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Antropologia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Antropologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Antropologia.Font = new System.Drawing.Font("Fira Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Antropologia.ForeColor = System.Drawing.Color.DeepPink;
-            this.Antropologia.Location = new System.Drawing.Point(402, 208);
-            this.Antropologia.Name = "Antropologia";
-            this.Antropologia.Size = new System.Drawing.Size(223, 169);
-            this.Antropologia.TabIndex = 10;
-            this.Antropologia.Text = "🏺\r\nantropologia filosofica\r\n";
-            this.Antropologia.UseVisualStyleBackColor = false;
-            this.Antropologia.Click += new System.EventHandler(this.Antropologia_Click);
-            // 
-            // Arquitectura
-            // 
-            this.Arquitectura.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Arquitectura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Arquitectura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Arquitectura.Font = new System.Drawing.Font("Fira Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Arquitectura.ForeColor = System.Drawing.Color.LightGray;
-            this.Arquitectura.Location = new System.Drawing.Point(145, 208);
-            this.Arquitectura.Name = "Arquitectura";
-            this.Arquitectura.Size = new System.Drawing.Size(223, 169);
-            this.Arquitectura.TabIndex = 9;
-            this.Arquitectura.Text = "💻\r\narquitectura\r\n";
-            this.Arquitectura.UseVisualStyleBackColor = false;
-            this.Arquitectura.Click += new System.EventHandler(this.Arquitectura_Click);
             // 
             // PanelDejuego
             // 
@@ -253,10 +61,10 @@
             this.PanelDejuego.Controls.Add(this.groupBox1);
             this.PanelDejuego.Controls.Add(this.panel5);
             this.PanelDejuego.Controls.Add(this.panel3);
-            this.PanelDejuego.Location = new System.Drawing.Point(2, 2);
+            this.PanelDejuego.Location = new System.Drawing.Point(172, -33);
             this.PanelDejuego.Name = "PanelDejuego";
             this.PanelDejuego.Size = new System.Drawing.Size(1137, 733);
-            this.PanelDejuego.TabIndex = 13;
+            this.PanelDejuego.TabIndex = 14;
             // 
             // LabelPregunta
             // 
@@ -365,7 +173,6 @@
             this.siguienteArbtn.TabIndex = 4;
             this.siguienteArbtn.Text = "Siguiente";
             this.siguienteArbtn.UseVisualStyleBackColor = false;
-            this.siguienteArbtn.Click += new System.EventHandler(this.siguienteArbtn_Click);
             // 
             // menubtn
             // 
@@ -378,7 +185,6 @@
             this.menubtn.TabIndex = 3;
             this.menubtn.Text = "Volver al menu";
             this.menubtn.UseVisualStyleBackColor = false;
-            this.menubtn.Click += new System.EventHandler(this.menubtn_Click);
             // 
             // volverbtnAR
             // 
@@ -391,7 +197,6 @@
             this.volverbtnAR.TabIndex = 2;
             this.volverbtnAR.Text = "Volver";
             this.volverbtnAR.UseVisualStyleBackColor = false;
-            this.volverbtnAR.Click += new System.EventHandler(this.volverbtnAR_Click);
             // 
             // panel6
             // 
@@ -455,23 +260,14 @@
             this.labeldeModulo.TabIndex = 2;
             this.labeldeModulo.Text = "modulo Seleccionado";
             // 
-            // FormJugador
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1140, 736);
-            this.Controls.Add(this.PanelMenu);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1481, 667);
             this.Controls.Add(this.PanelDejuego);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormJugador";
-            this.Text = "FormJugador";
-            this.panel1.ResumeLayout(false);
-            this.pnlSidebar.ResumeLayout(false);
-            this.pnlSidebar.PerformLayout();
-            this.PanelMenu.ResumeLayout(false);
-            this.PanelMenu.PerformLayout();
+            this.Name = "Form2";
+            this.Text = "Form2";
             this.PanelDejuego.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ArquitecturaPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -485,20 +281,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlSidebar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel PanelMenu;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Salirbtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Deporte;
-        private System.Windows.Forms.Button Calculo;
-        private System.Windows.Forms.Button Antropologia;
-        private System.Windows.Forms.Button Arquitectura;
         private System.Windows.Forms.Panel PanelDejuego;
         private System.Windows.Forms.Label LabelPregunta;
         private System.Windows.Forms.PictureBox ArquitecturaPictureBox;
